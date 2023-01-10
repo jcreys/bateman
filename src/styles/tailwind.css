@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 .signature {
+    display:flex;
+    align-items: center;
+    justify-content: center;
     height: 170px;
     max-width: 100%;
     white-space: nowrap;

@@ -11,7 +11,7 @@ export default function Container(props) {
             <td rowSpan={5}>
               <div className={"vertical-line"} />
             </td>
-            <td>{props.firstName}</td>
+            <td>{`${props.firstName} ${props.lastName}`}</td>
           </tr>
           <tr>
             <td colSpan={3}>{props.jobTitle}</td>

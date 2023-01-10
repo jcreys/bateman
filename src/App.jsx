@@ -12,15 +12,16 @@ import {
   MegaphoneIcon,
   UserGroupIcon,
   XMarkIcon,
+  UserCircleIcon,
+  AdjustmentsHorizontalIcon,
+  FolderIcon
 } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Teams', href: '#', icon: UserGroupIcon, current: false },
-  { name: 'Directory', href: '#', icon: MagnifyingGlassCircleIcon, current: false },
-  { name: 'Announcements', href: '#', icon: MegaphoneIcon, current: false },
-  { name: 'Office Map', href: '#', icon: MapIcon, current: false },
+  { name: 'Details', href: '#', icon: UserCircleIcon, current: true },
+  { name: 'Templates', href: '#', icon: FolderIcon, current: false },
+  { name: 'Styles', href: '#', icon: AdjustmentsHorizontalIcon, current: false },
+
 ]
 
 function classNames(...classes) {
@@ -39,7 +40,7 @@ export default function App() {
         <body class="h-full overflow-hidden">
         ```
       */}
-      <div className="flex h-full">
+      <div className="flex min-h-screen">
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 lg:hidden" onClose={setSidebarOpen}>
             <Transition.Child

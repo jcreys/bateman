@@ -12,7 +12,7 @@
   }
   ```
 */
-export default function Example(props) {
+export default function Form(props) {
   return (
     <form className="space-y-6" action="#" method="POST">
       <div className="bg-white px-4 py-5 shadow sm:rounded-lg sm:p-6">

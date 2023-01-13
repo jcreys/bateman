@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
-import Sidebar from './Sidebar'
-import ConfigPanel from './ConfigPanel'
-import Preview from './Preview'
-// import Columns from './Columns'
+import React, {useState} from "react";
+import Sidebar from "./Sidebar";
+import Details from "./pages/Details";
+import Templates from './pages/Templates'
+import NotFound from './pages/NotFound'
+import Preview from "./Preview";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
-  const [showDetails, setOption] = useState(true);
-  const [showTemplates, setShowTemplates] = useState(false);
   const [details, setDetails] = useState({
     firstName: "",
     lastName: "",
@@ -16,7 +17,7 @@ export default function App() {
     email: "",
     phoneNumber: "",
     address: "",
-  });
+  });  
   function handleChange(event) {
     const value = event.target.value;
     setDetails({
@@ -24,34 +25,37 @@ export default function App() {
       [event.target.name]: value,
     });
   }
-
-
-  console.log(name);
   return (
     <>
       <div className="flex min-h-screen">
-      <Sidebar />
-      <div className="relative z-0 flex flex-1 overflow-hidden">
-{      
-      showDetails ?
-      <ConfigPanel
-        firstName={details.firstName}
-        lastName={details.lastName}
-        jobTitle={details.jobTitle}
-        department={details.department}
-        companyName={details.companyName}
-        email={details.email}
-        phoneNumber={details.phoneNumber}
-        address={details.address}
-      />
-      : <Templates />
-      
-  }
-      <Preview onChange={handleChange} />
-    </div>
+        <Sidebar />
+        <BrowserRouter>
+          
+          <Routes>
+            <Route path='/' element={<Details onChange={handleChange}/>} />
+            <Route path='/Templates' element={<Templates />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+          
+          <div className="relative z-0 flex flex-1 overflow-hidden flex h-screen justify-center items-center ">
+          <main className="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last">
+
+          <Preview
+            firstName={details.firstName}
+            lastName={details.lastName}
+            jobTitle={details.jobTitle}
+            department={details.department}
+            companyName={details.companyName}
+            email={details.email}
+            phoneNumber={details.phoneNumber}
+            address={details.address}
+          />
+
+                </main>
+          </div>
+          
+        </BrowserRouter>
       </div>
-      
     </>
-    
-  )
+  );
 }

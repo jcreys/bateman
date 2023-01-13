@@ -165,9 +165,8 @@ export default function App() {
                   <nav className="mt-5 flex-1" aria-label="Sidebar">
                     <div className="space-y-1 px-2">
                       {navigation.map((item) => (
-                        <a
+                        <Link to={`/${item.name}`}
                           key={item.name}
-                          href={item.href}
                           className={classNames(
                             item.current
                               ? "bg-gray-200 text-gray-900"
@@ -185,7 +184,7 @@ export default function App() {
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </nav>

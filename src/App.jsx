@@ -4,6 +4,7 @@ import Details from "./pages/Details";
 import Templates from "./pages/Templates";
 import NotFound from "./pages/NotFound";
 import Preview from "./Preview";
+import Styles from "./pages/Styles";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -25,16 +26,33 @@ export default function App() {
       [event.target.name]: value,
     });
   }
+  const [colour, setColour] = useState({
+    themeColour: "",
+    textColour: "",
+    linkColour: "",
+  });
+
+  function handleColourChange(event) {
+    const value = event.target.value;
+    setColour({
+      ...colour,
+      [event.target.name]: value,
+    });
+  }
+  console.log(colour);
   return (
     <>
       <div className="flex min-h-screen">
         <BrowserRouter>
           <Sidebar />
           <Routes>
-
             <Route path="/" element={<Details onChange={handleChange} />} />
-            <Route path="/Details" element={<Details onChange={handleChange} />} />
+            <Route
+              path="/Details"
+              element={<Details onChange={handleChange} />}
+            />
             <Route path="/Templates" element={<Templates />} />
+            <Route path="/Styles" element={<Styles onChange={handleColourChange}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
 
@@ -49,6 +67,9 @@ export default function App() {
                 email={details.email}
                 phoneNumber={details.phoneNumber}
                 address={details.address}
+                themeColour={colour.themeColour}
+                fontColour={colour.fontColour}
+                linkColour={colour.linkColour}
               />
             </main>
           </div>

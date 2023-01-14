@@ -1,5 +1,6 @@
 import React from "react";
 export default function Preview(props) {
+  console.log(props.themeColour)
   return (
     <table
       cellPadding={0}
@@ -47,7 +48,7 @@ export default function Preview(props) {
                       style={{
                         margin: "0px",
                         fontSize: "16px",
-                        color: "rgb(0, 0, 0)",
+                        color: `#${props.textColour}`,
                         fontWeight: 600,
                       }}
                     >
@@ -61,7 +62,7 @@ export default function Preview(props) {
                       className="job-title__Container-sc-1hmtp73-0 ibpiyI"
                       style={{
                         margin: "0px",
-                        color: "rgb(0, 0, 0)",
+                        color: `#${props.textColour}`,
                         fontSize: "12px",
                         lineHeight: "20px",
                       }}
@@ -75,7 +76,7 @@ export default function Preview(props) {
                       style={{
                         margin: "0px",
                         fontWeight: 500,
-                        color: "rgb(0, 0, 0)",
+                        color: `#${props.textColour}`,
                         fontSize: "12px",
                         lineHeight: "20px",
                       }}
@@ -89,7 +90,7 @@ export default function Preview(props) {
                     <div style={{ width: "30px" }} />
                   </td>
                   <td
-                    color="#ff0044"
+                    color={`#${props.themeColour}`}
                     direction="vertical"
                     width={1}
                     height="auto"
@@ -97,7 +98,8 @@ export default function Preview(props) {
                     style={{
                       width: "1px",
                       borderBottom: "none",
-                      borderLeft: "1px solid rgb(255, 0, 68)",
+                      // borderLeft: "1px solid rgb(255, 0, 68)",
+                      borderLeft: `1px solid #${props.themeColour}`,
                     }}
                   />
                   <td width={30}>
@@ -131,23 +133,23 @@ export default function Preview(props) {
                                 <tr>
                                   <td style={{ verticalAlign: "bottom" }}>
                                     <span
-                                      color="#ff0044"
+                                      color={`#${props.themeColour}`}
                                       width={11}
                                       className="contact-info__IconWrapper-sc-mmkjr6-1 eOlNoC"
                                       style={{
                                         display: "inline-block",
-                                        backgroundColor: "rgb(255, 0, 68)",
+                                        backgroundColor: `#${props.themeColour}`,
                                       }}
                                     >
                                       <img
                                         src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
-                                        color="#ff0044"
+                                        color={`#${props.themeColour}`}
                                         alt="mobilePhone"
                                         width={13}
                                         className="contact-info__ContactLabelIcon-sc-mmkjr6-0 glcxte"
                                         style={{
                                           display: "block",
-                                          backgroundColor: "rgb(255, 0, 68)",
+                                          backgroundColor: `#${props.themeColour}`,
                                         }}
                                       />
                                     </span>
@@ -159,7 +161,7 @@ export default function Preview(props) {
                           <td
                             style={{
                               padding: "0px",
-                              color: "rgb(0, 0, 0)",
+                              color: `#${props.textColour}`,
                             }}
                           >
                             <a
@@ -168,7 +170,7 @@ export default function Preview(props) {
                               className="contact-info__ExternalLink-sc-mmkjr6-2 dwaWtg"
                               style={{
                                 textDecoration: "none",
-                                color: "rgb(0, 0, 0)",
+                                color: `#${props.textColour}`,
                                 fontSize: "12px",
                               }}
                             >
@@ -192,23 +194,23 @@ export default function Preview(props) {
                                 <tr>
                                   <td style={{ verticalAlign: "bottom" }}>
                                     <span
-                                      color="#ff0044"
+                                      color={`#${props.themeColour}`}
                                       width={11}
                                       className="contact-info__IconWrapper-sc-mmkjr6-1 eOlNoC"
                                       style={{
                                         display: "inline-block",
-                                        backgroundColor: "rgb(255, 0, 68)",
+                                        backgroundColor: `#${props.themeColour}`,
                                       }}
                                     >
                                       <img
                                         src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
-                                        color="#ff0044"
+                                        color={`#${props.themeColour}`}
                                         alt="emailAddress"
                                         width={13}
                                         className="contact-info__ContactLabelIcon-sc-mmkjr6-0 glcxte"
                                         style={{
                                           display: "block",
-                                          backgroundColor: "rgb(255, 0, 68)",
+                                          backgroundColor: `#${props.themeColour}`,
                                         }}
                                       />
                                     </span>
@@ -224,7 +226,7 @@ export default function Preview(props) {
                               className="contact-info__ExternalLink-sc-mmkjr6-2 dwaWtg"
                               style={{
                                 textDecoration: "none",
-                                color: "rgb(0, 0, 0)",
+                                color: `#${props.textColour}`,
                                 fontSize: "12px",
                               }}
                             >
@@ -248,23 +250,23 @@ export default function Preview(props) {
                                 <tr>
                                   <td style={{ verticalAlign: "bottom" }}>
                                     <span
-                                      color="#ff0044"
+                                      color={`#${props.themeColour}`}
                                       width={11}
                                       className="contact-info__IconWrapper-sc-mmkjr6-1 eOlNoC"
                                       style={{
                                         display: "inline-block",
-                                        backgroundColor: "rgb(255, 0, 68)",
+                                        backgroundColor: `#${props.themeColour}`,
                                       }}
                                     >
                                       <img
                                         src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
-                                        color="#ff0044"
+                                        color={`#${props.themeColour}`}
                                         alt="website"
                                         width={13}
                                         className="contact-info__ContactLabelIcon-sc-mmkjr6-0 glcxte"
                                         style={{
                                           display: "block",
-                                          backgroundColor: "rgb(255, 0, 68)",
+                                          backgroundColor: `#${props.themeColour}`,
                                         }}
                                       />
                                     </span>
@@ -280,7 +282,7 @@ export default function Preview(props) {
                               className="contact-info__ExternalLink-sc-mmkjr6-2 dwaWtg"
                               style={{
                                 textDecoration: "none",
-                                color: "rgb(0, 0, 0)",
+                                color: `#${props.textColour}`,
                                 fontSize: "12px",
                               }}
                             >
@@ -304,23 +306,23 @@ export default function Preview(props) {
                                 <tr>
                                   <td style={{ verticalAlign: "bottom" }}>
                                     <span
-                                      color="#ff0044"
+                                      color={`#${props.themeColour}`}
                                       width={11}
                                       className="contact-info__IconWrapper-sc-mmkjr6-1 eOlNoC"
                                       style={{
                                         display: "inline-block",
-                                        backgroundColor: "rgb(255, 0, 68)",
+                                        backgroundColor: `#${props.themeColour}`,
                                       }}
                                     >
                                       <img
                                         src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/address-icon-2x.png"
-                                        color="#ff0044"
+                                        color={`#${props.themeColour}`}
                                         alt="address"
                                         width={13}
                                         className="contact-info__ContactLabelIcon-sc-mmkjr6-0 glcxte"
                                         style={{
                                           display: "block",
-                                          backgroundColor: "rgb(255, 0, 68)",
+                                          backgroundColor: `#${props.themeColour}`,
                                         }}
                                       />
                                     </span>
@@ -335,7 +337,7 @@ export default function Preview(props) {
                               className="contact-info__Address-sc-mmkjr6-3 ikFVIq"
                               style={{
                                 fontSize: "12px",
-                                color: "rgb(0, 0, 0)",
+                                color: `#${props.textColour}`,
                               }}
                             >
                               <span>{props.address}</span>
@@ -369,16 +371,18 @@ export default function Preview(props) {
                 </tr>
                 <tr>
                   <td
-                    color="#ff0044"
+                    // color={`#${props.themeColour}`}
+                    color={`#${props.themeColour}`}
                     direction="horizontal"
                     width="auto"
                     height={1}
                     className="color-divider__Divider-sc-1h38qjv-0 dVPycS"
                     style={{
                       width: "100%",
-                      borderBottom: "1px solid rgb(255, 0, 68)",
+                      borderBottom: `1px solid #${props.themeColour}`,
                       borderLeft: "none",
                       display: "block",
+                      backgroundColor: `#${props.themeColour}`
                     }}
                   />
                 </tr>
@@ -427,7 +431,7 @@ export default function Preview(props) {
                               style={{
                                 display: "inline-block",
                                 padding: "0px",
-                                backgroundColor: "rgb(43, 138, 226)",
+                                backgroundColor: `#${props.linkColour}`,
                               }}
                             >
                               <img
@@ -437,7 +441,7 @@ export default function Preview(props) {
                                 height={24}
                                 className="social-links__LinkImage-sc-py8uhj-1 cKHJaU"
                                 style={{
-                                  backgroundColor: "rgb(43, 138, 226)",
+                                  backgroundColor: `#${props.linkColour}`,
                                   maxWidth: "135px",
                                   display: "block",
                                 }}
@@ -455,7 +459,7 @@ export default function Preview(props) {
                               style={{
                                 display: "inline-block",
                                 padding: "0px",
-                                backgroundColor: "rgb(43, 138, 226)",
+                                backgroundColor: `#${props.linkColour}`,
                               }}
                             >
                               <img
@@ -465,7 +469,7 @@ export default function Preview(props) {
                                 height={24}
                                 className="social-links__LinkImage-sc-py8uhj-1 cKHJaU"
                                 style={{
-                                  backgroundColor: "rgb(43, 138, 226)",
+                                  backgroundColor: `#${props.linkColour}`,
                                   maxWidth: "135px",
                                   display: "block",
                                 }}
@@ -497,7 +501,7 @@ export default function Preview(props) {
               style={{
                 fontSize: "12px",
                 display: "block",
-                color: "rgb(0, 0, 0)",
+                color: `#${props.textColour}`,
               }}
             >
               Create Your Own Free Signature

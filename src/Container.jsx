@@ -1,5 +1,4 @@
 export default function Container(props) {
-  console.log(props.jobTitle);
   return (
     <div className="bg-white px-4 py-5 shadow sm:rounded-lg sm:p-6">
       <table cellPadding={0} cellSpacing={0} className={"signature"}>

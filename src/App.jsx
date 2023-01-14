@@ -27,9 +27,9 @@ export default function App() {
     });
   }
   const [colour, setColour] = useState({
-    themeColour: "",
-    textColour: "",
-    linkColour: "",
+    themeColour: "FF8200",
+    textColour: "000000",
+    linkColour: "8BB8E1",
   });
 
   function handleColourChange(event) {

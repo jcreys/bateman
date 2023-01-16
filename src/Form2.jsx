@@ -12,7 +12,8 @@
   }
   ```
 */
-export default function Example(props) {
+export default function Form2(props) {
+  // console.log('props', props)
   return (
     <form className="space-y-8 divide-y divide-gray-200">
       <div className="space-y-8 divide-y divide-gray-200">
@@ -120,6 +121,7 @@ export default function Example(props) {
                   type="text"
                   name="firstName"
                   id="firstName"
+                  value={props.firstName}
                   autoComplete="given-name"
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={props.onChange}
@@ -140,6 +142,7 @@ export default function Example(props) {
                   name="lastName"
                   id="lastName"
                   autoComplete="family-name"
+                  value={props.lastName}
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={props.onChange}
                 />
@@ -160,6 +163,7 @@ export default function Example(props) {
                   type="email"
                   autoComplete="email"
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  value={props.email}
                   onChange={props.onChange}
                 />
               </div>
@@ -177,6 +181,7 @@ export default function Example(props) {
                   name="department"
                   id="department"
                   autoComplete="department"
+                  value={props.department}
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={props.onChange}
                 />
@@ -195,6 +200,7 @@ export default function Example(props) {
                   name="jobTitle"
                   id="jobTitle"
                   autoComplete="jobTitle"
+                  value={props.jobTitle}
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={props.onChange}
                 />
@@ -213,6 +219,7 @@ export default function Example(props) {
                   name="companyName"
                   id="companyName"
                   autoComplete="companyName"
+                  value={props.companyName}
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={props.onChange}
                 />
@@ -232,6 +239,7 @@ export default function Example(props) {
                   name="phoneNumber"
                   id="phoneNumber"
                   autoComplete="phoneNumber"
+                  value={props.phoneNumber}
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={props.onChange}
                 />
@@ -250,6 +258,7 @@ export default function Example(props) {
                   name="address"
                   id="address"
                   autoComplete="address"
+                  value={props.address}
                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   onChange={props.onChange}
                 />

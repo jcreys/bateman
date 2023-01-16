@@ -1,6 +1,6 @@
 import React from "react";
 export default function Preview(props) {
-  console.log(props.themeColour)
+  // console.log(props.themeColour)
   return (
     <table
       cellPadding={0}

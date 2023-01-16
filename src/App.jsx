@@ -7,17 +7,16 @@ import Preview from "./Preview";
 import Styles from "./pages/Styles";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 export default function App() {
   const [details, setDetails] = useState({
-    firstName: "",
-    lastName: "",
-    jobTitle: "",
-    department: "",
-    companyName: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
+    firstName: "Joshua",
+    lastName: "Reyes",
+    jobTitle: "Software Developer",
+    department: "Product",
+    companyName: "Thales",
+    email: "reyes.j15@gmail.com",
+    phoneNumber: "416-240-9199",
+    address: "212-2370 Keele St.",
   });
   function handleChange(event) {
     const value = event.target.value;
@@ -26,6 +25,7 @@ export default function App() {
       [event.target.name]: value,
     });
   }
+
   const [colour, setColour] = useState({
     themeColour: "FF8200",
     textColour: "000000",
@@ -39,20 +39,49 @@ export default function App() {
       [event.target.name]: value,
     });
   }
-  console.log(colour);
   return (
     <>
       <div className="flex min-h-screen">
         <BrowserRouter>
           <Sidebar />
           <Routes>
-            <Route path="/" element={<Details onChange={handleChange} />} />
+            <Route
+              path="/"
+              element={
+                <Details
+                  onChange={handleChange}
+                  firstName={details.firstName}
+                  lastName={details.lastName}
+                  jobTitle={details.jobTitle}
+                  department={details.department}
+                  companyName={details.companyName}
+                  email={details.email}
+                  phoneNumber={details.phoneNumber}
+                  address={details.address}
+                />
+              }
+            />
             <Route
               path="/Details"
-              element={<Details onChange={handleChange} />}
+              element={
+                <Details
+                  onChange={handleChange}
+                  firstName={details.firstName}
+                  lastName={details.lastName}
+                  jobTitle={details.jobTitle}
+                  department={details.department}
+                  companyName={details.companyName}
+                  email={details.email}
+                  phoneNumber={details.phoneNumber}
+                  address={details.address}
+                />
+              }
             />
             <Route path="/Templates" element={<Templates />} />
-            <Route path="/Styles" element={<Styles onChange={handleColourChange}/>} />
+            <Route
+              path="/Styles"
+              element={<Styles onChange={handleColourChange} />}
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
 

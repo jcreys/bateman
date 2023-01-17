@@ -80,7 +80,12 @@ export default function App() {
             <Route path="/Templates" element={<Templates />} />
             <Route
               path="/Styles"
-              element={<Styles onChange={handleColourChange} />}
+              element={<Styles 
+                onChange={handleColourChange} 
+                themeColour={colour.themeColour}
+                textColour={colour.textColour}
+                linkColour={colour.linkColour}
+              />}
             />
             <Route path="*" element={<NotFound />} />
           </Routes>
@@ -97,7 +102,7 @@ export default function App() {
                 phoneNumber={details.phoneNumber}
                 address={details.address}
                 themeColour={colour.themeColour}
-                fontColour={colour.fontColour}
+                textColour={colour.textColour}
                 linkColour={colour.linkColour}
               />
             </main>

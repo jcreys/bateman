@@ -33,6 +33,7 @@ export default function StylesConfig(props) {
                       id="themeColour"
                       autoComplete="given-name"
                       className="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm"
+                      value={props.themeColour}
                       onChange={onChange}
                     />
                   </div>
@@ -51,6 +52,7 @@ export default function StylesConfig(props) {
                       name="textColour"
                       id="textColour"
                       autoComplete="family-name"
+                      value={props.textColour}
                       className="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm"
                       onChange={onChange}
                     />
@@ -70,6 +72,7 @@ export default function StylesConfig(props) {
                       name="linkColour"
                       type="text"
                       autoComplete="linkColour"
+                      value={props.linkColour}
                       className="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       onChange={onChange}
                     />

@@ -11,7 +11,12 @@ export default function Styles(props) {
           {/* <Preview /> */}
         </div>
       </main>
-      <StylesConfig onChange={props.onChange}/>
+      <StylesConfig 
+        onChange={props.onChange}
+        themeColour={props.themeColour}
+        textColour={props.textColour}
+        linkColour={props.linkColour}
+      />
     </div>
   );
 }

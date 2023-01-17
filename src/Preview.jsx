@@ -1,4 +1,3 @@
-import * as clipboard from "clipboard-polyfill";
 import React, { useState,useRef } from "react";
 export default function Preview(props) {
   const [copySuccess, setCopySuccess] = useState(false);

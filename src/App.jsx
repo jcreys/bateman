@@ -41,7 +41,7 @@ export default function App() {
   }
   return (
     <>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen" >
         <BrowserRouter>
           <Sidebar />
           <Routes>
@@ -90,8 +90,21 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
 
-          <div className="relative z-0 flex flex-1 overflow-hidden flex h-screen justify-center items-center ">
-            <main className="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last">
+          <div className="relative z-0 "                 style ={{
+                  backgroundColor: 'white',
+                  display: 'flex',
+                  // flexDirection: 'column',
+                  // justifyContent:'center', 
+                  // alignItems:'center',
+                  width: "55.7%"
+                }}> 
+            <main className="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last" style ={{
+              backgroundColor: 'white',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent:'center', 
+              alignItems:'center', 
+            }}>
               <Preview
                 firstName={details.firstName}
                 lastName={details.lastName}
@@ -104,6 +117,7 @@ export default function App() {
                 themeColour={colour.themeColour}
                 textColour={colour.textColour}
                 linkColour={colour.linkColour}
+
               />
             </main>
           </div>

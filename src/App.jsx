@@ -46,7 +46,7 @@ export default function App() {
           <Sidebar />
           <Routes>
             <Route
-              path="/"
+              path="/bateman/"
               element={
                 <Details
                   onChange={handleChange}
